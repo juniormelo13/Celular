@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.7) url("/assets/img/bg2.jpg") center no-repeat fixed;
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: absolute;
+    height: 50rem;
+    width: 25rem;
+    border-radius: 65px;
+}
+
+/* CELULAR */
+
+.container:hover {
+    cursor: pointer;
+}
+
+.container:hover .container_top {
+    box-shadow: 13px 20px 15px rgba(0, 0, 0, 0.5);
+    transform: scale(1.04) translateY(-13px);
+}
+
+.container:hover .container_mid {
+    box-shadow: 13px 20px 15px rgba(0, 0, 0, 0.5);
+    transform: scale(1.04);
+}
+
+.container:hover .container_bottom {
+    box-shadow: 13px 20px 15px rgba(0, 0, 0, 0.5);
+    transform: scale(1.04) translateY(13px);
+}
+
+/* PARTE DE CIMA DO CELULAR */
+
+.container_top {
+    position: relative;
+    background-color: rgb(230, 230, 230);
+    width: 100%;
+    height: 10%;
+    top: 0;
+    border-top-left-radius: 65px;
+    border-top-right-radius: 65px;
+    z-index: 0;
+    transition: all 0.5s;
+}
+
+.flash {
+    position: absolute;
+    background-color: rgb(196, 195, 195);
+    box-shadow: 0px 0px 3px 3px rgb(80, 79, 78);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    top: 50%;
+    left: 25%;
+    transform: translate(0, -50%);
+}
+
+.output {
+    position: absolute;
+    background-color: rgb(24, 24, 24);
+    width: 20%;
+    height: 10%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    filter: blur(0.7px);
+}
+
+/* PARTE DO MEIO DO CELULAR */
+
+.container_mid {
+    background: linear-gradient(98deg, transparent 50%, rgba(255, 255, 255, 0.1) 50%), url(/assets/img/bg2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 280% 100%;
+    position: relative;
+    height: 80%;
+    width: 100%;
+    border-left: 2px solid rgb(230, 230, 230);
+    border-right: 2px solid rgb(230, 230, 230);
+    transition: transform 0.5s, box-shadow 0.5s;
+    overflow: hidden;
+}
+
+.off {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(98deg, rgb(30, 30, 30)50%, rgb(15, 15, 15)50%);
+    border-left: 2px solid rgb(230, 230, 230);
+    border-right: 2px solid rgb(230, 230, 230);
+    opacity: 1;
+    transition: 1s 0.5s;
+    z-index: 0;
+}
+
+.screen_top {
+    width: 100%;
+    height: 50%;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.clock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s 0.8s;
+}
+
+.clock p {
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 100%;
+}
+
+.clock p:nth-child(2) {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.screen_bottom {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    color: #fff;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 2rem 1rem;
+    opacity: 0;
+    transform: translateY(18%);
+    transition: all 0.5s 0.8s;
+}
+
+.screen_bottom .i {
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+.screen_bottom .i:hover {
+    transform: translateY(0px) scale(1.2);
+}
+
+
+/* PARTE DE BAIXO DO CELULAR */
+
+.container_bottom {
+    position: relative;
+    bottom: 0;
+    background-color: rgb(230, 230, 230);
+    width: 100%;
+    height: 10%;
+    border-bottom-left-radius: 65px;
+    border-bottom-right-radius: 65px;
+    transition: all 0.5s;
+}
+
+#button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 4px solid rgb(150, 150, 150);
+    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.alert {
+    position: relative;
+    width: 25rem;
+    left: 30rem;
+    top: 21rem;
+    transition: opacity 1s 1.5s;
+}
+
+.alert p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.alert .i {
+    margin-top: 1rem;
+    color: #fff;
+    width: 100%;
+    height: 5rem;
+    animation: anime 0.3s linear infinite alternate;
+}
+
+@keyframes anime {
+    to {
+        transform: translateX(-10px);
+    }
+}
