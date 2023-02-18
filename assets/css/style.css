@@ -24,10 +24,6 @@ body {
 
 /* CELULAR */
 
-.container:hover {
-    cursor: pointer;
-}
-
 .container:hover .container_top {
     box-shadow: 13px 20px 15px rgba(0, 0, 0, 0.5);
     transform: scale(1.04) translateY(-13px);
@@ -84,7 +80,7 @@ body {
 /* PARTE DO MEIO DO CELULAR */
 
 .container_mid {
-    background: linear-gradient(98deg, transparent 50%, rgba(255, 255, 255, 0.1) 50%), url(/assets/img/bg2.jpg);
+    background: linear-gradient(98deg, transparent 50%, rgba(255, 255, 255, 0.1) 50%), url(../img/bg2.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 280% 100%;
@@ -187,6 +183,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#button:hover {
+    cursor: pointer;
 }
 
 .alert {
