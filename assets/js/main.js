@@ -2,7 +2,7 @@ var btn = document.querySelector('#button')
 var screen = document.querySelector('.off')
 var clock = document.querySelector('.clock')
 var icons = document.querySelector('.screen_bottom')
-var info = document.querySelector('.alert')
+var arrow = document.querySelector('.arrow')
 var screenON = false
 
 function screen_on_off() {
@@ -16,7 +16,7 @@ function screen_on_off() {
         icons.style.opacity = '1'
         icons.style.transform = 'translate(0%)'
         icons.style.transition = 'all 0.5s 0.8s'
-        info.style.opacity = '0'
+        arrow.style.opacity = '0'
     } else {
         screen.style.opacity = '1'
         screen.style.transition = '0.4s 0.5s'

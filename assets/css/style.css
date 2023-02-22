@@ -9,14 +9,15 @@
 body {
     background: rgba(0, 0, 0, 0.7) url(../img/bg2.jpg) center no-repeat;
     background-blend-mode: darken;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
+    width: 100%;
 }
 
 .cellPhone {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     height: 50rem;
     width: 25rem;
     border-radius: 65px;
@@ -189,29 +190,18 @@ body {
     cursor: pointer;
 }
 
-.alert {
-    position: relative;
-    width: 25rem;
-    left: 30rem;
-    top: 21rem;
-    transition: opacity 1s 1.5s;
+/* INDICAÇÃO DE ONDE CLICAR */
+
+.arrow {
+    position: absolute;
+    left: 65%;
+    top: 53%;
+    transform: translate(-65%, -53%);
+    transition: opacity 1s 1s;
 }
 
-.alert p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    color: #fff;
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.alert .i {
-    margin-top: 1rem;
-    color: #fff;
-    width: 100%;
-    height: 5rem;
+.arrow svg {
+    color: #000;
     animation: anime 0.3s linear infinite alternate;
 }
 
